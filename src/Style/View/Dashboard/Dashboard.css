@@ -6,7 +6,6 @@
     gap: 1.5rem;
 }
 
-/* ── Header ── */
 .dashboard-header {
     display: flex;
     justify-content: space-between;
@@ -18,16 +17,16 @@
 .dashboard-header h1 {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #f8fafc;
+    color: #1e293b;
     margin-bottom: 0.3rem;
 }
 
 .dashboard-header p {
-    color: #94a3b8;
+    color: #64748b;
     font-size: 0.95rem;
 }
 
-/* ── Stats Row ── */
+/* ── Stats ── */
 .stats-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -35,37 +34,38 @@
 }
 
 .stat-card {
-    background-color: #1e293b;
-    border: 1px solid #334155;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
-    padding: 1.2rem 1.5rem;
+    padding: 1.3rem 1.5rem;
     display: flex;
     align-items: center;
     gap: 1rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s;
 }
 
-.stat-card i {
-    font-size: 1.8rem;
-    color: #64748b;
-}
+.stat-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
 
-.stat-card.open i   { color: #2563eb; }
+.stat-card i { font-size: 1.8rem; color: #94a3b8; }
+.stat-card.open i     { color: #2563eb; }
 .stat-card.progress i { color: #7c3aed; }
 .stat-card.critical i { color: #dc2626; }
 
 .stat-number {
     display: block;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #f8fafc;
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #1e293b;
     line-height: 1;
 }
 
 .stat-label {
     display: block;
     font-size: 0.8rem;
-    color: #64748b;
+    color: #94a3b8;
     margin-top: 0.2rem;
+    font-weight: 500;
 }
 
 /* ── Filters ── */
@@ -74,46 +74,50 @@
     gap: 0.8rem;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #1e293b;
-    border: 1px solid #334155;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 1rem 1.2rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
 .search-input {
     flex: 2;
     min-width: 200px;
-    background-color: #0f172a;
-    border: 1px solid #334155;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
     padding: 0.55rem 0.9rem;
-    color: #e2e8f0;
+    color: #1e293b;
     font-size: 0.875rem;
     outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
 }
 
 .search-input:focus {
-    border-color: #7dd3fc;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
 }
 
 .filters-bar select {
-    background-color: #0f172a;
-    border: 1px solid #334155;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
     padding: 0.55rem 0.8rem;
-    color: #e2e8f0;
+    color: #1e293b;
     font-size: 0.875rem;
     cursor: pointer;
     outline: none;
+    transition: border 0.2s;
 }
 
 .filters-bar select:focus {
-    border-color: #7dd3fc;
+    border-color: #3b82f6;
 }
 
 .btn-clear {
     background: transparent;
-    border: 1px solid #334155;
+    border: 1px solid #e2e8f0;
     color: #94a3b8;
     padding: 0.55rem 0.9rem;
     border-radius: 8px;
@@ -124,16 +128,18 @@
 }
 
 .btn-clear:hover {
-    background-color: #334155;
-    color: #f8fafc;
+    background-color: #f1f5f9;
+    color: #ef4444;
+    border-color: #fca5a5;
 }
 
 /* ── Table ── */
 .tickets-table-wrapper {
-    background-color: #1e293b;
+    background-color: #ffffff;
     border-radius: 12px;
-    border: 1px solid #334155;
+    border: 1px solid #e2e8f0;
     overflow-x: auto;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
 .tickets-table {
@@ -143,40 +149,43 @@
 }
 
 .tickets-table thead tr {
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid #f1f5f9;
+    background-color: #f8fafc;
 }
 
 .tickets-table th {
     padding: 0.9rem 1rem;
     text-align: left;
-    color: #64748b;
-    font-weight: 600;
-    font-size: 0.8rem;
+    color: #94a3b8;
+    font-weight: 700;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
     white-space: nowrap;
 }
 
 .ticket-row {
-    border-bottom: 1px solid #1e293b;
+    border-bottom: 1px solid #f1f5f9;
     cursor: pointer;
     transition: background 0.15s ease;
 }
 
-.ticket-row:hover {
-    background-color: #0f172a;
-}
+.ticket-row:hover { background-color: #eff6ff; }
 
 .tickets-table td {
     padding: 0.9rem 1rem;
-    color: #cbd5e1;
+    color: #374151;
     vertical-align: middle;
 }
 
 .ticket-id-cell {
     font-family: monospace;
-    font-size: 0.78rem;
-    color: #64748b;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    background-color: #f8fafc;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
 }
 
 .ticket-title-cell {
@@ -184,19 +193,19 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-weight: 500;
-    color: #e2e8f0;
+    font-weight: 600;
+    color: #1e293b;
 }
 
 .btn-view {
-    background-color: #1e3a5f;
-    color: #7dd3fc;
-    border: 1px solid #2563eb;
-    padding: 0.35rem 0.8rem;
+    background-color: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+    padding: 0.35rem 0.9rem;
     border-radius: 6px;
     cursor: pointer;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 700;
     transition: all 0.2s;
     white-space: nowrap;
 }
@@ -204,26 +213,28 @@
 .btn-view:hover {
     background-color: #2563eb;
     color: white;
+    border-color: #2563eb;
 }
 
 /* ── Empty & Loading ── */
 .empty-state {
     text-align: center;
     padding: 4rem 2rem;
-    color: #475569;
-    background-color: #1e293b;
+    color: #94a3b8;
+    background-color: #ffffff;
     border-radius: 12px;
-    border: 1px solid #334155;
+    border: 1px solid #e2e8f0;
 }
 
 .empty-state i {
     font-size: 3rem;
     display: block;
     margin-bottom: 1rem;
+    color: #cbd5e1;
 }
 
 .empty-state h3 {
-    color: #94a3b8;
+    color: #475569;
     margin-bottom: 0.5rem;
 }
 
@@ -235,7 +246,7 @@
 .loading-state {
     text-align: center;
     padding: 4rem;
-    color: #64748b;
+    color: #94a3b8;
 }
 
 .loading-state i {

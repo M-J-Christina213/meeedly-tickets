@@ -7,9 +7,9 @@
 }
 
 .btn-back {
-    background: transparent;
-    border: 1px solid #334155;
-    color: #94a3b8;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
     padding: 0.5rem 1rem;
     border-radius: 8px;
     cursor: pointer;
@@ -18,22 +18,26 @@
     align-items: center;
     transition: all 0.2s;
     width: fit-content;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .btn-back:hover {
-    background-color: #1e293b;
-    color: #f8fafc;
+    background-color: #eff6ff;
+    color: #2563eb;
+    border-color: #bfdbfe;
 }
 
 /* ── Ticket Header Card ── */
 .ticket-header-card {
-    background-color: #1e293b;
-    border-radius: 12px;
+    background-color: #ffffff;
+    border-radius: 14px;
     padding: 1.8rem;
-    border: 1px solid #334155;
+    border: 1px solid #e2e8f0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .ticket-header-top {
@@ -45,17 +49,21 @@
 }
 
 .ticket-id {
-    font-size: 0.8rem;
-    color: #64748b;
+    font-size: 0.78rem;
+    color: #94a3b8;
     font-family: monospace;
-    display: block;
-    margin-bottom: 0.3rem;
+    display: inline-block;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
 }
 
 .ticket-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #f8fafc;
+    color: #1e293b;
 }
 
 .ticket-badges {
@@ -68,35 +76,42 @@
     display: flex;
     gap: 1.5rem;
     font-size: 0.85rem;
-    color: #64748b;
+    color: #94a3b8;
     flex-wrap: wrap;
+    padding-top: 0.5rem;
+    border-top: 1px solid #f1f5f9;
 }
 
 .ticket-description h3 {
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 700;
     color: #94a3b8;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
 }
 
 .ticket-description p {
-    color: #cbd5e1;
-    line-height: 1.7;
+    color: #374151;
+    line-height: 1.75;
     font-size: 0.95rem;
+    background-color: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #f1f5f9;
 }
 
 /* ── Management Panel ── */
 .management-panel {
-    background-color: #1e293b;
-    border-radius: 12px;
+    background-color: #ffffff;
+    border-radius: 14px;
     padding: 1.4rem 1.8rem;
-    border: 1px solid #334155;
+    border: 1px solid #e2e8f0;
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
     align-items: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
 .management-group {
@@ -106,58 +121,64 @@
 }
 
 .management-group label {
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.75rem;
+    font-weight: 700;
     color: #94a3b8;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
 }
 
 .management-group select {
-    background-color: #0f172a;
-    border: 1px solid #334155;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
     padding: 0.5rem 0.8rem;
-    color: #e2e8f0;
+    color: #1e293b;
     font-size: 0.9rem;
     cursor: pointer;
     outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    font-weight: 500;
 }
 
 .management-group select:focus {
-    border-color: #7dd3fc;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
 }
 
 .assigned-name {
-    color: #7dd3fc;
+    color: #2563eb;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 700;
     padding-top: 0.3rem;
 }
 
 /* ── Conversation ── */
 .conversation-section,
 .reply-section {
-    background-color: #1e293b;
-    border-radius: 12px;
+    background-color: #ffffff;
+    border-radius: 14px;
     padding: 1.8rem;
-    border: 1px solid #334155;
+    border: 1px solid #e2e8f0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
 .conversation-section h2,
 .reply-section h2 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 700;
-    color: #f8fafc;
+    color: #1e293b;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #f1f5f9;
 }
 
 .empty-responses {
     text-align: center;
-    padding: 2rem;
-    color: #475569;
+    padding: 2.5rem;
+    color: #cbd5e1;
 }
 
 .empty-responses i {
@@ -179,13 +200,13 @@
 }
 
 .response-card.staff {
-    background-color: #1e3a5f;
-    border-left-color: #7dd3fc;
+    background-color: #eff6ff;
+    border-left-color: #2563eb;
 }
 
 .response-card.user {
-    background-color: #0f172a;
-    border-left-color: #475569;
+    background-color: #f8fafc;
+    border-left-color: #cbd5e1;
 }
 
 .response-header {
@@ -201,28 +222,29 @@
     display: flex;
     align-items: center;
     font-size: 0.9rem;
-    color: #e2e8f0;
+    color: #1e293b;
+    font-weight: 600;
 }
 
 .staff-badge {
     background-color: #2563eb;
     color: white;
     font-size: 0.7rem;
-    font-weight: 600;
-    padding: 0.15rem 0.5rem;
+    font-weight: 700;
+    padding: 0.15rem 0.55rem;
     border-radius: 999px;
     margin-left: 0.5rem;
 }
 
 .response-time {
     font-size: 0.8rem;
-    color: #64748b;
+    color: #94a3b8;
 }
 
 .response-message {
-    color: #cbd5e1;
+    color: #374151;
     font-size: 0.9rem;
-    line-height: 1.6;
+    line-height: 1.65;
     margin: 0;
 }
 
@@ -242,18 +264,21 @@
 
 .reply-top-row input {
     flex: 1;
-    background-color: #0f172a;
-    border: 1px solid #334155;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
     padding: 0.6rem 0.9rem;
-    color: #e2e8f0;
+    color: #1e293b;
     font-size: 0.9rem;
     outline: none;
     min-width: 200px;
+    transition: border 0.2s, box-shadow 0.2s;
 }
 
 .reply-top-row input:focus {
-    border-color: #7dd3fc;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+    background-color: #fff;
 }
 
 .staff-toggle {
@@ -261,25 +286,29 @@
     align-items: center;
     gap: 0.4rem;
     font-size: 0.85rem;
-    color: #94a3b8;
+    color: #64748b;
     cursor: pointer;
     white-space: nowrap;
+    font-weight: 500;
 }
 
 .reply-form textarea {
-    background-color: #0f172a;
-    border: 1px solid #334155;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
     padding: 0.8rem;
-    color: #e2e8f0;
+    color: #1e293b;
     font-size: 0.9rem;
     outline: none;
     resize: vertical;
     width: 100%;
+    transition: border 0.2s, box-shadow 0.2s;
 }
 
 .reply-form textarea:focus {
-    border-color: #7dd3fc;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+    background-color: #fff;
 }
 
 .reply-actions {
@@ -290,7 +319,7 @@
 .loading-state {
     text-align: center;
     padding: 4rem;
-    color: #64748b;
+    color: #94a3b8;
     font-size: 1.1rem;
 }
 
