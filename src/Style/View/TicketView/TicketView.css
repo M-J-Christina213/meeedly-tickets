@@ -1,0 +1,307 @@
+.ticket-view-container {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.btn-back {
+    background: transparent;
+    border: 1px solid #334155;
+    color: #94a3b8;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s;
+    width: fit-content;
+}
+
+.btn-back:hover {
+    background-color: #1e293b;
+    color: #f8fafc;
+}
+
+/* ── Ticket Header Card ── */
+.ticket-header-card {
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 1.8rem;
+    border: 1px solid #334155;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ticket-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.ticket-id {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-family: monospace;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.ticket-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.ticket-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.ticket-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    color: #64748b;
+    flex-wrap: wrap;
+}
+
+.ticket-description h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ticket-description p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* ── Management Panel ── */
+.management-panel {
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 1.4rem 1.8rem;
+    border: 1px solid #334155;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.management-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.management-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.management-group select {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.management-group select:focus {
+    border-color: #7dd3fc;
+}
+
+.assigned-name {
+    color: #7dd3fc;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-top: 0.3rem;
+}
+
+/* ── Conversation ── */
+.conversation-section,
+.reply-section {
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 1.8rem;
+    border: 1px solid #334155;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.conversation-section h2,
+.reply-section h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.empty-responses {
+    text-align: center;
+    padding: 2rem;
+    color: #475569;
+}
+
+.empty-responses i {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.responses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.response-card {
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    border-left: 4px solid transparent;
+}
+
+.response-card.staff {
+    background-color: #1e3a5f;
+    border-left-color: #7dd3fc;
+}
+
+.response-card.user {
+    background-color: #0f172a;
+    border-left-color: #475569;
+}
+
+.response-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.response-author {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+.staff-badge {
+    background-color: #2563eb;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    margin-left: 0.5rem;
+}
+
+.response-time {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.response-message {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ── Reply Form ── */
+.reply-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.reply-top-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.reply-top-row input {
+    flex: 1;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 0.6rem 0.9rem;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    outline: none;
+    min-width: 200px;
+}
+
+.reply-top-row input:focus {
+    border-color: #7dd3fc;
+}
+
+.staff-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.reply-form textarea {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 0.8rem;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    outline: none;
+    resize: vertical;
+    width: 100%;
+}
+
+.reply-form textarea:focus {
+    border-color: #7dd3fc;
+}
+
+.reply-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.loading-state {
+    text-align: center;
+    padding: 4rem;
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.loading-state i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .ticket-header-top { flex-direction: column; }
+    .management-panel { flex-direction: column; gap: 1rem; }
+    .reply-top-row { flex-direction: column; align-items: flex-start; }
+}
