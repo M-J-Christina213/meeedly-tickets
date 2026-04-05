@@ -1,0 +1,134 @@
+.create-ticket-container {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.create-ticket-header {
+    margin-bottom: 2rem;
+}
+
+.create-ticket-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 0.4rem;
+}
+
+.create-ticket-header p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.ticket-form {
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    border: 1px solid #334155;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #cbd5e1;
+}
+
+.required {
+    color: #f87171;
+    margin-left: 2px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 0.65rem 0.9rem;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    transition: border 0.2s ease;
+    outline: none;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #7dd3fc;
+}
+
+.input-error {
+    border-color: #f87171 !important;
+}
+
+.error-msg {
+    color: #f87171;
+    font-size: 0.8rem;
+}
+
+.char-count {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-align: right;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.65rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.btn-primary:hover { background-color: #1d4ed8; }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-secondary {
+    background-color: transparent;
+    color: #94a3b8;
+    border: 1px solid #334155;
+    padding: 0.65rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #1e293b;
+    color: #f8fafc;
+}
+
+@media (max-width: 768px) {
+    .form-row { flex-direction: column; }
+    .ticket-form { padding: 1.2rem; }
+}
