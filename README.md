@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# Meeedly Support Ticket System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A scalable support ticket management system built for Meeedly's internal support operations. Designed to handle high ticket volumes across multiple teams with efficient communication between users and support staff.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Live Features
 
-### `npm start`
+- Submit support tickets with title, description, category and priority
+- View individual tickets with full conversation history
+- Reply as a user or support staff member
+- Assign tickets to agents and update ticket status
+- Dashboard with real-time stats, filtering, sorting and search
+- Data persists across sessions using localStorage
+- Fully responsive across desktop, tablet and mobile
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- React (with Hooks — useState, useEffect)
+- React Router DOM (client-side routing)
+- Bootstrap & Bootstrap Icons (UI utilities)
+- localStorage (data persistence)
+- Noplin UI conventions (Meeedly's component standards)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Project Structure
+```
+src/
+├── Assets/              # Logos and images
+├── Components/          # Reusable UI components
+│   ├── Navigation/      # Top navigation bar
+│   └── Footer/          # Page footer
+├── Routes/              # App routing (MainRouter.js)
+├── Scripts/             # Business logic
+│   └── Tickets/         # TicketUtils.js — core data layer
+├── Style/               # All CSS files
+│   ├── Components/      # Component-level styles
+│   ├── View/            # Page-level styles
+│   └── Main.css         # Global styles
+├── Utilities/           # Helper functions (DateFormat.js)
+└── View/                # Page components
+    ├── Dashboard/        # Ticket management dashboard
+    ├── CreateTicket/     # Ticket submission form
+    ├── TicketView/       # Ticket detail and conversation
+    └── Error404/         # 404 page
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+- Node.js v16 or above
+- npm v8 or above
 
-### `npm run eject`
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/meeedly-tickets.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Navigate into the project
+cd meeedly-tickets
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install dependencies
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Start the development server
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The app will run at `http://localhost:3000`
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Key Engineering Decisions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Data Layer (TicketUtils.js)
+All ticket logic is isolated in a single module. This makes it easy to swap localStorage for a real API in the future without touching any UI components.
 
-### Code Splitting
+### Component Architecture
+Components are small, focused and reusable. Navigation and Footer are shared across all pages. Each view page handles its own state independently.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Scalability Considerations
+- Filter and sort logic runs on the data layer, not inside components
+- Ticket IDs are generated with timestamps to avoid collisions at scale
+- Data structures are designed to map directly to a future REST API schema
+- Seed data is only loaded once — system checks before writing
 
-### Analyzing the Bundle Size
+### Performance
+- No unnecessary re-renders — state updates are scoped to the component that owns them
+- Filtering and sorting are computed from derived state on each render, avoiding stale data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Pages Overview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Page | Route | Description |
+|---|---|---|
+| Dashboard | `/` | View all tickets with filters and stats |
+| Create Ticket | `/create` | Submit a new support ticket |
+| Ticket View | `/ticket/:id` | View ticket details and conversation |
+| 404 | `*` | Handles unknown routes |
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Author
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Christina Wanigasekara**
+University: APIIT (Asia Pacific Institute of Information Technology)
+Built for Meeedly Software Engineering Internship Assignment
