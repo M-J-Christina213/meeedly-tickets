@@ -1,9 +1,14 @@
 .footer {
-  background-color: #ffffff;
-  color: #94a3b8;
+  background: transparent;
   text-align: center;
   padding: 1.2rem;
-  font-size: 0.85rem;
-  margin-top: auto;
-  border-top: 1px solid #e2e8f0;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 2rem;
+}
+
+/* optional nice hover */
+.footer:hover {
+  color: #64748b;
 }
